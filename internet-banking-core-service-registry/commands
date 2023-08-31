@@ -1,0 +1,19 @@
+lsof -i:8080
+kill -9 PID
+
+
+docker run --restart unless-stopped -p 3307:3307 -d --name mariadb --net keycloak-network -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=keycloak -e MYSQL_USER=keycloak -e MYSQL_PASSWORD=password mariadb
+docker run --restart unless-stopped -d -p 8080:8080 -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin --name keycloak --net keycloak-network sleighzy/keycloak
+
+client id:internet-banking-core-client
+secret:I02EwF6cNmAoXVuJSDHhhvPX12BNQ3do
+
+super-user
+pswd:super
+
+
+TODO:
+postman test
+https://javatodev.com/microservices-authentication-and-authorization-with-keycloak/
+
+

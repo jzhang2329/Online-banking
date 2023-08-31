@@ -1,0 +1,2 @@
+Internet-banking-api-client
+secret:2P3lGfUk6B7MSwzs7ctIsVd590NIRoe7
